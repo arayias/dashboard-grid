@@ -8,8 +8,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
 img {
-  max-width: 55px;
   height: auto;
+  max-width: 100%;
 }
 
 body {
@@ -24,7 +24,7 @@ body {
 
 .wrapper {
   display: grid;
-  grid-template-columns: auto 8fr;
+  grid-template-columns: 2fr 8fr;
   grid-template-rows: 2fr 8fr;
   height: 100vh;
 }
@@ -40,12 +40,17 @@ nav {
   font-size: 1.5rem;
   font-weight: 700;
   color: #fff;
-  margin-left: 1em;
+  margin-left: 0.2em;
 }
 
 .logo {
   display: flex;
   align-items: center;
+  margin-bottom: 2em;
+}
+
+.logo > img {
+  width: 55px;
 }
 
 .links,
@@ -61,6 +66,12 @@ ul {
 .links > ul > li {
   display: flex;
   align-items: center;
+  cursor: pointer;
+}
+
+.links > ul > li p:hover {
+  scale: 1.1;
+  transition: scale 0.2s ease-in-out;
 }
 
 .links img {
@@ -69,4 +80,82 @@ ul {
 
 .extra-links {
   margin-top: 2em;
+}
+
+section.search {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto 1fr;
+  padding: 1em;
+}
+
+.search__input {
+  padding: 0.5em;
+  border: 1px solid #ccc;
+  border-radius: 0.5em;
+  font-size: 1rem;
+  outline: none;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  max-width: 80%;
+}
+
+section.search * {
+  color: black;
+  font-size: 1em;
+}
+
+.search-bar {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 1em;
+  align-items: center;
+}
+
+.profile {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+.header-info {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  align-items: center;
+  justify-items: center;
+  gap: 0.3em;
+}
+
+.welcome {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 1em;
+}
+
+.header-buttons {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  align-items: center;
+  gap: 1em;
+}
+
+.header-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.3em 0.8em;
+  border-radius: 5px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.header-button:hover {
+  background-color: #e6e6e6;
+}
+
+.cards {
+  background-color: #d4d6cd;
 }
